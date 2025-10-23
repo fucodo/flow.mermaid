@@ -1,0 +1,21 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "fucodo/mermaid",
+    "require": {
+        "neos/flow": "*",
+		"neos/fluid-adaptor": "*",
+		"neos/utility-files": "*"
+    },
+	"license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "fucodo\\mermaid\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "fucodo.mermaid"
+        }
+    }
+}

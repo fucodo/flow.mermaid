@@ -1,0 +1,6 @@
+fucodo:
+  mermaid:
+    # is written in the puppeteer config file to guide mermaid to the correct location of the browser
+    puppeteer-config:
+      executablePath: '/usr/bin/chromium'
+      args: ['--no-sandbox']
