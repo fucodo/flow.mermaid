@@ -1,0 +1,2 @@
+fucodoMermaid_graphicsCache:
+  frontend: Neos\Cache\Frontend\StringFrontend

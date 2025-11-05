@@ -1,0 +1,20 @@
+{
+	"theme": "neutral",
+	"themeVariables": {
+		"fontFamily": "Helvetica",
+		"fontSize": "12px"
+	},
+	"look": "handdrawn",
+	"fontFamily": "Helvetica",
+	"layout": "elk",
+	"elk": {
+		"mergeEdges": false,
+		"nodePlacementStrategy": "BRANDES_KOEPF"
+	},
+	"flowchart": {
+		"curve": "linear",
+		"nodeSpacing": 30,
+		"rankSpacing": 30,
+		"htmlLabels": false
+	}
+}

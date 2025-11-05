@@ -1,0 +1,9 @@
+fucodo\mermaid\Service\MermaidService:
+  properties:
+    graphicsCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: fucodoMermaid_graphicsCache
