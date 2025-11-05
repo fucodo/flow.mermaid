@@ -38,13 +38,19 @@ class MermaidViewHelper extends AbstractViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('useBase64', 'bool', 'use base64 or not', false, false);
+        $this->registerArgument('format', 'string', 'use base64 or not', false, 'svg');
     }
 
     public function render(): string
     {
-        if ($this->arguments['useBase64']) {
-            return '<img src="data:image/svg+xml;base64,' . base64_encode($this->mermaidService->renderMermaidGraph($this->renderChildren())) . '"/>';
+        $format = $this->arguments['format'];
+        if ($format === 'svg') {
+            if ($this->arguments['useBase64']) {
+                return '<img width="100%" src="data:image/xml+svg;base64,' . base64_encode($this->mermaidService->renderMermaidGraph($this->renderChildren(), $format)) . '" />';
+            }
+            return $this->mermaidService->renderMermaidGraph($this->renderChildren(), $format);
         }
-        return $this->mermaidService->renderMermaidGraph($this->renderChildren());
+
+        return '<img width="100%" src="data:image/' . $format . ',' . base64_encode($this->mermaidService->renderMermaidGraph($this->renderChildren(), $format)) . '" />';
     }
 }
